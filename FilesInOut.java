@@ -30,7 +30,9 @@ public class FilesInOut {
                 String num = line.substring(i);
                 name = name.trim();  //trim whitespace
 
+                name = name.toUpperCase();
 
+                /*
                 //Break up name to First and Last Name
                 int j = 0;
                 while (Character.isLetter(name.charAt(j))){
@@ -44,6 +46,7 @@ public class FilesInOut {
                 //Make Title Case (initials in capital)
                 firstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1);
                 surname = surname.substring(0,1).toUpperCase() + surname.substring(1);
+                */
 
                 //Date Format 'dd/mm/yyyy'
                 String dd = num.substring(0,2);
@@ -53,7 +56,7 @@ public class FilesInOut {
                 //System.out.print(firstName + " " + surname);
                 //System.out.println(" " + num);
 
-                String output = (firstName + " " + surname + " " +
+                String output = (name + " " +
                         dd + "/" + mm + "/" + yyyy + "\n");
 
                 out.write(output);
@@ -118,7 +121,7 @@ public class FilesInOut {
                 //System.out.println(" " + num);
 
                 String output = (firstName + " " + surname + " " +
-                        dd + "/" + mm + "/" + "yyyy" + "\n");
+                        dd + "/" + mm + "/" + yyyy + "\n");
 
                 out.write(output);
             }
